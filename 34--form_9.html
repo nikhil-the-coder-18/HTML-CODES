@@ -1,0 +1,68 @@
+<!-- Advanced Registration Form with Validation. 
+Author : Nikhil
+Date : 16/09/2025 -->
+
+<html>
+<head>
+	<title>Advanced Registration Form with Validation </title>
+	<style>
+		body{
+			background-color: rgb(88, 32, 231);
+			font-family: Arial, Helvetica, sans-serif
+		}
+		form {
+			border-radius: 15px;
+			padding: 2%;
+			background-color: white;
+			width: 400px;
+			height: 500px;
+			margin-left: 35%;
+			margin-top: 2%;
+		}
+
+		input, select {
+			margin-bottom: 10px;
+			border-radius: 3px;
+			width: 60%;
+			height: 4%;
+		}
+
+		#submit {
+			background-color:  rgb(88, 32, 231);
+			text-align: center;
+			padding: 1%;
+			color: white;
+			border-radius: 40px;
+			width: 260px;
+			height: 50;
+			font-weight: bold;
+			margin-top: 7%;
+			font-size: 1.1rem;
+		}
+	</style>
+</head>
+<body>
+	<h3>Advanced Registration Form with Validation </h3>	
+	<form action="/submit" method="post">
+	<h1>Register</h1><br>
+	<lable for="fullname">Full Name : </lable>
+	<input type="text" id="fullname" name="fullname"><br><br>
+	<lable for="email">Email : </lable>
+	<input type="email" id="email" name="email"><br><br>
+	<lable for="pass">Password : </lable>
+	<input type="password" id="pass" name="pass" minlength="6" required><br><br> 
+	<lable for="phone">Phone : </lable>
+	<input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required><br><br>
+	<lable fpr="country">Country : </lable>
+	<select id="country" name="country" required>
+		<option value="select">Select</option>
+		<option value="india">India</option>
+		<option value="usa">USA</option>
+		<option value="russia">Russia</option>
+	</select><br><br>
+	<lable for="picture">Profile Picture : </lable>
+	<input type="file" id="picture" name="picture" accept="image/*"><br><br>
+	<input type="submit" value="Register" id="submit">
+	</form>
+</body>
+</html>
